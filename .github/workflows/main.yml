@@ -74,7 +74,7 @@ jobs:
           git config --global user.name $USERNAME
           git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/continuous-integration-stata.git
           git status
-          git add tmp.log tmp.dta tmp.csv
+          git add tmp.dta tmp.csv
           git commit --allow-empty -m "added a data and/or log"
           git pull --rebase origin main
           git push -u origin main
