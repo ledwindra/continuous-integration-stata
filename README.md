@@ -18,14 +18,15 @@ Stata do-file using GitHub Actions you need:
 Before going any further, you may want to `fork` this repository first and GitHub
 Secrets on `Settings -> Secrets` tab. What you need are the following:
 
-- AUTHORIZATION
-- CODE
-- EMAIL
-- FIRST_NAME
-- LAST_NAME
-- SERIAL_NUMBER
-- URL
-- USERNAME
+- AUTHORIZATION: given by Stata
+- CODE: given by Stata
+- EMAIL: your GitHub email for git configuration (user.email)
+- FIRST_NAME: your Stata first name
+- LAST_NAME: your Stata last name
+- SERIAL_NUMBER: given by Stata
+- OLD_FILE: in my case, store my `Stata15Linux64.tar.gz` on Dropbox and it needs to be renamed. by default it's `Stata15Linux64.tar.gz?dl=0`
+- URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository
+- USERNAME: your GitHub username for git configuration (user.name)
 
 That's it! Then you can go to `Actions` tab and just click `Run workflow` and voila!
 You've just run a Stata do-file using GitHub's owned machine. 😀
