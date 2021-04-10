@@ -32,7 +32,6 @@ jobs:
           HOME_DIR: ${{secrets. HOME_DIR }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
           OLD_FILE: ${{ secrets.OLD_FILE }}
-          REPOSITORY: ${{ secrets.REPOSITORY }}
           SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
           URL: ${{ secrets.URL }}
           VERSION: ${{ secrets.VERSION }}
@@ -71,6 +70,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
+          REPOSITORY: ${{ secrets.REPOSITORY }}
           USERNAME: ${{ secrets.USERNAME }}
         run: |
           git config --global user.email $EMAIL
