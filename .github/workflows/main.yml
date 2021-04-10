@@ -27,6 +27,7 @@ jobs:
       - name: Install Stata 15
         env:
           URL: ${{ secrets.URL }}
+          OLD_FILE: ${{ secrets.OLD_FILE }}
           SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
           CODE: ${{ secrets.CODE }}
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
