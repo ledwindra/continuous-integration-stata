@@ -60,7 +60,7 @@ jobs:
           EOF
           which stata
           ls -la
-          cd /home/runner/work/stata-installer/stata-installer/
+          cd /home/runner/work/continuous-integration-stata/continuous-integration-stata/
           /usr/local/stata15/stata -b do tmp
           
       - name: Set-up git and make a commit
@@ -71,7 +71,7 @@ jobs:
         run: |
           git config --global user.email $EMAIL
           git config --global user.name $USERNAME
-          git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/stata-installer.git
+          git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/continuous-integration-stata.git
           git status
           git add tmp.log tmp.dta tmp.csv
           git commit --allow-empty -m "added a data and/or log"
