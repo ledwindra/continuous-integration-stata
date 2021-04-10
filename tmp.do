@@ -1,4 +1,5 @@
 clear
+cls
 shell whoami
 shell cat /etc/os-release
 set obs 1000
