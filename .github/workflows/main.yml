@@ -29,9 +29,10 @@ jobs:
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
           CODE: ${{ secrets.CODE }}
           FIRST_NAME: ${{ secrets.FIRST_NAME }}
-          HOME: ${{ secrets.HOME }}
+          HOME_DIR: ${{secrets. HOME_DIR }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
-          OLD_FILE: ${{ secrets.OLD_FILE }}          
+          OLD_FILE: ${{ secrets.OLD_FILE }}
+          REPOSITORY: ${{ secrets.REPOSITORY }}
           SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
           URL: ${{ secrets.URL }}
           VERSION: ${{ secrets.VERSION }}
@@ -63,7 +64,7 @@ jobs:
           EOF
           which stata
           ls -la
-          cd /home/runner/work/$HOME/$HOME/
+          cd $HOME_DIR
           /usr/local/stata${VERSION}/stata -b do tmp
           
       - name: Set-up git and make a commit
@@ -74,7 +75,7 @@ jobs:
         run: |
           git config --global user.email $EMAIL
           git config --global user.name $USERNAME
-          git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$HOME.git
+          git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
           git status
           git add tmp.dta tmp.csv
           git commit --allow-empty -m "added a data and/or log"
