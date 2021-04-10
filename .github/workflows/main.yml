@@ -37,7 +37,7 @@ jobs:
           mkdir ~/Downloads
           cd ~/Downloads
           wget $URL
-          mv Stata15Linux64.tar.gz?dl=0 Stata15Linux64.tar.gz
+          mv $OLD_FILE Stata15Linux64.tar.gz
           cd /tmp/
           sudo mkdir statafiles
           cd statafiles
