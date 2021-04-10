@@ -27,6 +27,7 @@ Secrets on `Settings -> Secrets` tab. What you need are the following:
 - OLD_FILE: in my case, store my `Stata15Linux64.tar.gz` on Dropbox and it needs to be renamed. by default it's `Stata15Linux64.tar.gz?dl=0`
 - URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository
 - USERNAME: your GitHub username for git configuration (user.name)
+- VERSION: your Stata version (I use 15)
 
 That's it! Then you can go to `Actions` tab and just click `Run workflow` and voila!
 You've just run a Stata do-file using GitHub's owned machine. 😀

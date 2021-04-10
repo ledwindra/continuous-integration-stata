@@ -24,29 +24,30 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Install Stata 15
+      - name: Install Stata ${VERSION} and run a do-file example
         env:
-          URL: ${{ secrets.URL }}
-          OLD_FILE: ${{ secrets.OLD_FILE }}
-          SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
-          CODE: ${{ secrets.CODE }}
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
+          CODE: ${{ secrets.CODE }}
           FIRST_NAME: ${{ secrets.FIRST_NAME }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
+          OLD_FILE: ${{ secrets.OLD_FILE }}          
+          SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
+          URL: ${{ secrets.URL }}
+          VERSION: ${{ secrets.VERSION }}
         run: |
           mkdir ~/Downloads
           cd ~/Downloads
           wget $URL
-          mv $OLD_FILE Stata15Linux64.tar.gz
+          mv $OLD_FILE Stata${VERSION}Linux64.tar.gz
           cd /tmp/
           sudo mkdir statafiles
           cd statafiles
-          sudo tar -zxf ~/Downloads/Stata15Linux64.tar.gz
+          sudo tar -zxf ~/Downloads/Stata${VERSION}Linux64.tar.gz
           cd /usr/local
-          sudo mkdir stata15
-          cd stata15
+          sudo mkdir stata${VERSION}
+          cd stata${VERSION}
           sudo yes | sudo /tmp/statafiles/install
-          export PATH=/usr/local/stata15:$PATH
+          export PATH=/usr/local/stata${VERSION}:$PATH
           sudo ./stinit << EOF
           y
           y
@@ -62,7 +63,7 @@ jobs:
           which stata
           ls -la
           cd /home/runner/work/continuous-integration-stata/continuous-integration-stata/
-          /usr/local/stata15/stata -b do tmp
+          /usr/local/stata${VERSION}/stata -b do tmp
           
       - name: Set-up git and make a commit
         env:
