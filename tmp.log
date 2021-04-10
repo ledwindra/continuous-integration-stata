@@ -1,0 +1,57 @@
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   15.1   Copyright 1985-2017 StataCorp LLC
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+                                      College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+Single-user Stata perpetual license:
+       Serial number:  301506302557
+         Licensed to:  Hello
+                       World
+
+Notes:
+      1.  Stata is running in batch mode.
+      2.  Unicode is supported; see help unicode_advice.
+
+. do tmp 
+
+. clear
+
+. shell whoami
+
+runner
+
+. shell cat /etc/os-release
+
+NAME="Ubuntu"
+VERSION="16.04.7 LTS (Xenial Xerus)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 16.04.7 LTS"
+VERSION_ID="16.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+VERSION_CODENAME=xenial
+UBUNTU_CODENAME=xenial
+
+. set obs 1000
+number of observations (_N) was 0, now 1,000
+
+. generate x = rnormal(0, 1)
+
+. save tmp.dta, replace
+(note: file tmp.dta not found)
+file tmp.dta saved
+
+. export delimited tmp.csv, delimiter(",") novarnames replace
+(note: file tmp.csv not found)
+file tmp.csv saved
+
+. 
+end of do-file
