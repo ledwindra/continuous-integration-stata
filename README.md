@@ -22,6 +22,7 @@ Secrets on `Settings -> Secrets` tab. What you need are the following:
 - CODE: given by Stata
 - EMAIL: your GitHub email for git configuration (user.email)
 - FIRST_NAME: your Stata first name
+- HOME: the home directory name, which usually can be a repository name
 - LAST_NAME: your Stata last name
 - SERIAL_NUMBER: given by Stata
 - OLD_FILE: in my case, store my `Stata15Linux64.tar.gz` on Dropbox and it needs to be renamed. by default it's `Stata15Linux64.tar.gz?dl=0`
