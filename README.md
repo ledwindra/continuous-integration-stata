@@ -9,7 +9,7 @@ Imagine that you can avoid all of that. And that's what this repository is aimin
 
 # What you need
 I hope that you are using a legitimate Stata licese code because in order to run
-Stata do-file using GitHub Actions you need a:
+Stata do-file using GitHub Actions you need:
 - Serial number
 - Code
 - Authorization
