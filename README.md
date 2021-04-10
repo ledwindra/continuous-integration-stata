@@ -18,7 +18,7 @@ Stata do-file using GitHub Actions you need a:
 Before going any further, you may want to `fork` this repository first and GitHub
 Secrets on `Settings -> Secrets` tab. What you need are the following:
 
--AUTHORIZATION
+- AUTHORIZATION
 - CODE
 - EMAIL
 - FIRST_NAME
