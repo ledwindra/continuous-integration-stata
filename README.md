@@ -24,7 +24,7 @@ Secrets on `Settings -> Secrets` tab. What you need are the following:
 - FIRST_NAME: your Stata first name
 - HOME_DIR: home directory name. By default, it's `/home/runner/work/${REPOSITORY}/${REPOSITORY}/`
 - LAST_NAME: your Stata last name
-- OLD_FILE: in my case, store my `Stata15Linux64.tar.gz` on Dropbox and it needs to be renamed. by default it's `Stata15Linux64.tar.gz?dl=0`
+- OLD_FILE: by default, Stata gives the file name as `Stata15Linux64.tar.gz`. When downloading from it becomes `Stata15Linux64.tar.gz?dl=0` and it needs to be renamed just like the original
 - REPOSITORY: a repository name. For example, this repository is named `continuous-integration-stata`
 - SERIAL_NUMBER: given by Stata
 - URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository
