@@ -8,7 +8,7 @@ Hello world! Are you a researcher working primarily using Stata? Do you ever:
 Imagine that you can avoid all of that. And that's what this repository is aiming for!
 
 # What you need
-I hope that you are using a legitimate Stata licese code because in order to run
+I hope that you are using a legitimate Stata license code because in order to run
 Stata do-file using GitHub Actions you need:
 - Serial number
 - Code
