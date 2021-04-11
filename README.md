@@ -34,5 +34,10 @@ Secrets on `Settings -> Secrets` tab. What you need are the following:
 That's it! Then you can go to `Actions` tab and just click `Run workflow` and voila!
 You've just run a Stata do-file using GitHub's owned machine. 😀
 
+# Considerations
+You may need to modify the workflow configuration ([.github/workflows/main.yml](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/main.yml)) if:
+- Your data exceeds file size limit set by GitHub (50 MB) and hence you store your data on Dropbox. Possible solution: modify the configuration to download your data by adding `wget [FILE_URL]` line before running the do-file
+- Your data is inside a database (e.g. SQL database like MySQL or PostgreSQL), then you may want to install the database on the command line
+
 # P.S.
 Don't hesitate to reach me out for further questions.
