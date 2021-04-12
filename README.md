@@ -18,6 +18,7 @@ Stata do-file using GitHub Actions you need:
 Before going any further, you may want to `fork` this repository first and GitHub
 Secrets on `Settings -> Secrets` tab. What you need are the following:
 
+- ACCESS_TOKEN: you need a token that authorizes GitHub to make any git commit on behalf your account. Read [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) for details
 - AUTHORIZATION: given by Stata
 - CODE: given by Stata
 - EMAIL: your GitHub email for git configuration (user.email)
@@ -40,4 +41,4 @@ You may need to modify the workflow configuration ([.github/workflows/main.yml](
 - Your data is inside a database (e.g. SQL database like MySQL or PostgreSQL), then you may want to install the database on the command line
 
 # P.S.
-Don't hesitate to reach me out for further questions.
+Don't hesitate to reach me out for further questions. Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
