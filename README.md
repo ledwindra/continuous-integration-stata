@@ -13,21 +13,9 @@ In addition to solving the problems above, you can benefit from this repository 
 - Running unit tests if you're building a Stata package. This is something that I find lacking compared to other open source statistical packages (Julia/R/Python)
 
 # What you get
-Besides running Stata do-file, you can also see the output/result from the log file. However, you can't find it here because in my [workflow file](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/main.yml) I don't add it to my repository because if so anybody could see my Stata serial numbers (not sure if this could be harmful to me or not, though).
+Besides running Stata do-file, you can also see the output/result from the log file. However, you can't find it here because in my [workflow file](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/basic.yml) I don't add it to my repository because if so anybody could see my Stata serial numbers (not sure if this could be harmful to me or not, though).
 
-```YAML
-run: |
-   git config --global user.email $EMAIL
-   git config --global user.name $USERNAME
-   git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
-   git status
-   git add tmp.dta tmp.csv
-   git commit --allow-empty -m "added a data and/or log"
-   git pull --rebase origin main
-   git push -u origin main
-```
-
-To include that, you can just add `tmp.log` alongside `git add tmp.dta tmp.csv`.
+To include that, you can just modify `gid add ...` to `git add ${FILE_NAME}.log ${OTHER_FILE}`
 
 # What you need
 I hope that you are using a legitimate Stata license code because in order to run
@@ -58,10 +46,11 @@ That's it! Then you can go to `Actions` tab and just click `Run workflow` and vo
 You've just run a Stata do-file using GitHub's owned machine. 😀
 
 # Considerations
-You may need to modify the workflow configuration ([.github/workflows/main.yml](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/main.yml)) if:
+You may need to modify the workflow [configurations](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows)) if:
 - Your data exceeds file size limit set by GitHub (50 MB) and hence you store your data on Dropbox. Possible solution: modify the configuration to download your data by adding `wget [FILE_URL]` line before running the do-file
 - Your data is inside a database (e.g. SQL database like MySQL or PostgreSQL), then you may want to install the database on the command line
 - There's a possibility that your runner will be stopped automatically by GitHub Actions if it runs out of memory. In one of my private repositories, I had encountered the following error message when such problem happens: `##[warning]You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 0 MB`. Case in point: it's a GIS-related program
+- You have complex do-files that require more configurations in the LaTeX files (e.g. installing packages, font set-up, etc)
 
 # P.S.
 Don't hesitate to reach me out for further questions or send issues [here](https://github.com/ledwindra/continuous-integration-stata/issues). Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
