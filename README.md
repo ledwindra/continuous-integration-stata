@@ -7,19 +7,24 @@ Hello world! Are you a researcher working primarily using Stata? Do you ever:
 
 Imagine that you can avoid all of that. And that's what this repository is aiming for!
 
+# Potential use cases
+In addition to solving the problems above, you can benefit from this repository in some of the following ways:
+- Producing regression tables on LaTeX without having to install the distribution on your local machine—which can be pain in the neck
+- Running unit tests if you're building a Stata package. This is something that I find lacking compared to other open source statistical packages (Julia/R/Python)
+
 # What you get
 Besides running Stata do-file, you can also see the output/result from the log file. However, you can't find it here because in my [workflow file](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/main.yml) I don't add it to my repository because if so anybody could see my Stata serial numbers (not sure if this could be harmful to me or not, though).
 
 ```YAML
-       run: |
-          git config --global user.email $EMAIL
-          git config --global user.name $USERNAME
-          git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
-          git status
-          git add tmp.dta tmp.csv
-          git commit --allow-empty -m "added a data and/or log"
-          git pull --rebase origin main
-          git push -u origin main
+run: |
+   git config --global user.email $EMAIL
+   git config --global user.name $USERNAME
+   git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
+   git status
+   git add tmp.dta tmp.csv
+   git commit --allow-empty -m "added a data and/or log"
+   git pull --rebase origin main
+   git push -u origin main
 ```
 
 To include that, you can just add `tmp.log` alongside `git add tmp.dta tmp.csv`.
