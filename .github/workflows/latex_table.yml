@@ -69,7 +69,7 @@ jobs:
       - name: Compile PDF from LaTeX file
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: regression-table.tex
+          root_file: latex-table/regression-table.tex
           
       - name: Set-up git and make a commit
         env:
