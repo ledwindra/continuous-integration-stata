@@ -11,5 +11,5 @@ set obs 1000
 generate x = rnormal(0, 1)
 
 // save data stata and csv
-save data/tmp.dta, replace
-export delimited data/tmp.csv, delimiter(",") novarnames replace
+save data/basic.dta, replace
+export delimited data/basic.csv, delimiter(",") novarnames replace
