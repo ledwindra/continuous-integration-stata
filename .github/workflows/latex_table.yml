@@ -86,6 +86,6 @@ jobs:
           git status
           git add latex-table/*
           git commit --allow-empty -m "Added a regression table"
-          git pull --rebase origin development
-          git push -u origin development
+          git pull --rebase origin main
+          git push -u origin main
 
