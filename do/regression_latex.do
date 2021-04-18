@@ -24,7 +24,7 @@ sysuse auto, clear
 regress mpg foreign weight turn
 
 // export to a tex file
-outreg using regression-table, bdec(2 5 3 2) varlabels replace tex starlevels(10 5 1) ///
+outreg using latex-table/regression-table, bdec(2 5 3 2) varlabels replace tex starlevels(10 5 1) ///
 	sigsymbols(+,*,**) summstat(F \ r2_a) summtitle(F statistic \ Adjusted R-squared) ///
 	summdec(1 2)
 	
