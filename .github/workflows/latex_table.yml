@@ -82,8 +82,10 @@ jobs:
           git config --global user.email $EMAIL
           git config --global user.name $USERNAME
           git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
+          mv regression-table* latex-table/
           git status
           git add latex-table/*
           git commit --allow-empty -m "Added a regression table"
           git pull --rebase origin development
           git push -u origin development
+
