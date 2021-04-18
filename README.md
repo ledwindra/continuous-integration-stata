@@ -39,6 +39,7 @@ You've just run a Stata do-file using GitHub's owned machine. 😀
 You may need to modify the workflow configuration ([.github/workflows/main.yml](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows/main.yml)) if:
 - Your data exceeds file size limit set by GitHub (50 MB) and hence you store your data on Dropbox. Possible solution: modify the configuration to download your data by adding `wget [FILE_URL]` line before running the do-file
 - Your data is inside a database (e.g. SQL database like MySQL or PostgreSQL), then you may want to install the database on the command line
+- There's a possibility that your runner will be stopped automatically by GitHub Actions if it runs out of memory. In one of my private repositories, I had encountered the following error message when such problem happens: `##[warning]You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 0 MB`
 
 # P.S.
 Don't hesitate to reach me out for further questions or send issues [here](https://github.com/ledwindra/continuous-integration-stata/issues). Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
