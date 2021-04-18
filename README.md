@@ -41,4 +41,4 @@ You may need to modify the workflow configuration ([.github/workflows/main.yml](
 - Your data is inside a database (e.g. SQL database like MySQL or PostgreSQL), then you may want to install the database on the command line
 
 # P.S.
-Don't hesitate to reach me out for further questions. Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
+Don't hesitate to reach me out for further questions or send issues [here](https://github.com/ledwindra/continuous-integration-stata/issues). Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
