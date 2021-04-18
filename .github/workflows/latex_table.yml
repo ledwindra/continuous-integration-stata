@@ -62,14 +62,15 @@ jobs:
           y
           EOF
           which stata
-          ls -la
           cd $HOME_DIR
+          mkdir -p latex-table
           /usr/local/stata${VERSION}/stata -b do do/regression_latex.do
+          ls -la
           
       - name: Compile PDF from LaTeX file
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: regression-table.tex
+          root_file: latex-table/regression-table.tex
           
       - name: Set-up git and make a commit
         env:
@@ -81,9 +82,10 @@ jobs:
           git config --global user.email $EMAIL
           git config --global user.name $USERNAME
           git remote set-url origin https://$USERNAME:${ACCESS_TOKEN}@github.com/$USERNAME/$REPOSITORY.git
+          mv regression-table* latex-table/
           git status
-          mkdir -p regression
           git add latex-table/*
           git commit --allow-empty -m "Added a regression table"
-          git pull --rebase origin main
-          git push -u origin main
+          git pull --rebase origin development
+          git push -u origin development
+
