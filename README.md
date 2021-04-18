@@ -22,7 +22,7 @@ Besides running Stata do-file, you can also see the output/result from the log f
           git push -u origin main
 ```
 
-To include that, you can just add tmp.log alongside `git add tmp.dta tmp.csv`.
+To include that, you can just add `tmp.log` alongside `git add tmp.dta tmp.csv`.
 
 # What you need
 I hope that you are using a legitimate Stata license code because in order to run
