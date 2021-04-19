@@ -25,8 +25,7 @@ Stata do-file using GitHub Actions you need:
 - Authorization
 
 # How to run?
-Before going any further, you may want to `fork` this repository first and GitHub
-Secrets on `Settings -> Secrets` tab. What you need are the following:
+You can download the source code from [here](https://github.com/ledwindra/continuous-integration-stata/releases). Make sure to choose the latest version available. Then, you can create your own repository on GitHub. Before going any further, you need to add GitHub Secrets on `Settings -> Secrets` tab inside your repository. What you need are the following:
 
 - ACCESS_TOKEN: you need a token that authorizes GitHub to make any git commit on behalf your account. Read [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) for details
 - AUTHORIZATION: given by Stata
@@ -42,8 +41,7 @@ Secrets on `Settings -> Secrets` tab. What you need are the following:
 - USERNAME: your GitHub username for git configuration (user.name)
 - VERSION: your Stata version (I use 15)
 
-That's it! Then you can go to `Actions` tab and just click `Run workflow` and voila!
-You've just run a Stata do-file using GitHub's owned machine. 😀
+That's it! Then you can go to `Actions` tab and just click `Run workflow` and voila! You've just run a Stata do-file using GitHub's owned machine. 😀
 
 # Considerations
 You may need to modify the workflow [configurations](https://github.com/ledwindra/continuous-integration-stata/blob/main/.github/workflows) if:
