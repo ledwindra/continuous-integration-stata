@@ -27,11 +27,9 @@ $8
 y
 EOF
 
-# clone repo
-cd ~
-git clone $9
-cd "./${10}"
+# back to the default working directory
+cd /github/workspace
 
 # run do-file
-/usr/local/stata$3/stata -b do main "$11" "$12" "$13" "$10"
+/usr/local/stata$3/stata -b do main
 cat main.log
