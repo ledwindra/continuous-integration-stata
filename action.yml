@@ -1,4 +1,4 @@
-name: 'CI Stata'
+name: 'ci-stata'
 description: 'Run Stata do-file using GitHub Actions'
 inputs:
   AUTHORIZATION:
