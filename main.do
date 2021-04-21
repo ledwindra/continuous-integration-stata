@@ -23,5 +23,4 @@ shell git status
 shell git add regression-table.tex
 shell git commit -m "Added regression table tex file"
 shell git remote set-url origin "`origin'"
-display "`origin'"
-# shell git push origin main
+shell git push -u origin main
