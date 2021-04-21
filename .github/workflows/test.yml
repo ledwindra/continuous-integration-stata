@@ -30,7 +30,6 @@ jobs:
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
-    # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       env:
         EMAIL: ${{ secrets.EMAIL }}
@@ -41,7 +40,7 @@ jobs:
         git config --global user.email ${EMAIL}
         git config --global user.name ${USERNAME}
         mkdir -p latex
-        mv -r regression-table* latex/
+        mv regression-table* latex/
         git add data/ latex/
         git commit --allow-empty -m "Updated data and LaTeX table"
         git pull --rebase origin main
