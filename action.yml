@@ -1,21 +1,21 @@
 name: 'CI Stata'
 description: 'Run Stata do-file using GitHub Actions'
 inputs:
-  AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
+  AUTHORIZATION:
     required: true
-  CODE: ${{ secrets.CODE }}
+  CODE:
     required: true
-  FIRST_NAME: ${{ secrets.FIRST_NAME }}
+  FIRST_NAME:
     required: true
-  LAST_NAME: ${{ secrets.LAST_NAME }}
+  LAST_NAME:
     required: true
-  OLD_FILE: ${{ secrets.OLD_FILE }}
+  OLD_FILE:
     required: true
-  SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
+  SERIAL_NUMBER:
     required: true
-  URL: ${{ secrets.URL }}
+  URL:
     required: true
-  VERSION: ${{ secrets.VERSION }}
+  VERSION:
     required: true
 runs:
   using: "composite"
