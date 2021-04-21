@@ -1,3 +1,5 @@
+[![Test CI Stata](https://github.com/ledwindra/continuous-integration-stata/actions/workflows/test.yml/badge.svg)](https://github.com/ledwindra/continuous-integration-stata/actions/workflows/test.yml)
+
 # About
 
 Hello world! Are you a researcher working primarily using Stata? Have you ever:
