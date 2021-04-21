@@ -28,12 +28,14 @@ y
 EOF
 
 # clone repo
-cd ~
-git clone $9
+continuous-integration-stata
+# cd ~
+# git clone $9
+cd /home/runner/work/$10/$10
 ls -la
-cd "./${10}"
-pwd
-ls -la
+# cd "./${10}"
+# pwd
+# ls -la
 
 # run do-file
 /usr/local/stata$3/stata -b do main
