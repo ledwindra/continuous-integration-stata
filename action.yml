@@ -1,24 +1,31 @@
 name: 'Stata Action'
 description: 'Run Stata do-file using GitHub Actions'
 inputs:
-  AUTHORIZATION:
+  url:
     required: true
-  CODE:
+  old_file:
     required: true
-  FIRST_NAME:
+  version:
     required: true
-  LAST_NAME:
+  serial-number:
     required: true
-  OLD_FILE:
+  code:
     required: true
-  SERIAL_NUMBER:
+  authorization:
     required: true
-  URL:
+  first-name:
     required: true
-  VERSION:
+  last-name:
     required: true
 runs:
-  using: "composite"
-  steps:
-    - run: ${{ github.action_path }}/main.sh "${AUTHORIZATION}" "${CODE}" "${FIRST_NAME}" "${LAST_NAME}" "${OLD_FILE}" "${SERIAL_NUMBER}" "${URL}" "${VERSION}"
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.url }}
+    - ${{ inputs.old_file }}
+    - ${{ inputs.version }}
+    - ${{ inputs.serial-number }}
+    - ${{ inputs.code }}
+    - ${{ inputs.authorization }}
+    - ${{ inputs.first-name }}
+    - ${{ inputs.last-name }}
