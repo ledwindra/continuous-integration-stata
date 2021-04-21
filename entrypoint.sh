@@ -33,5 +33,5 @@ git clone $9
 cd "./${10}"
 
 # run do-file
-/usr/local/stata$3/stata -b do main
+/usr/local/stata$3/stata -b do main "$11" "$12" "$13" "$10"
 cat main.log
