@@ -28,9 +28,11 @@ y
 EOF
 
 # clone repo
-git clone $9
-ls -la
+echo "$9"
+git clone "$9"
+echo $10
 cd $10
+ls -la
 
 # run do-file
 /usr/local/stata$3/stata -b do main
