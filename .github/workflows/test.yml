@@ -1,62 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Main
+name: Test CI Stata
 
 on: push
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  ci-stata:
     runs-on: ubuntu-16.04
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    name: Run Stata do-file
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run Stata do-file
-        env:
-          AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
-          CODE: ${{ secrets.CODE }}
-          FIRST_NAME: ${{ secrets.FIRST_NAME }}
-          HOME_DIR: ${{secrets. HOME_DIR }}
-          LAST_NAME: ${{ secrets.LAST_NAME }}
-          OLD_FILE: ${{ secrets.OLD_FILE }}
-          SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
-          URL: ${{ secrets.URL }}
-          VERSION: ${{ secrets.VERSION }}
-        run: |
-          mkdir ~/Downloads
-          cd ~/Downloads
-          wget $URL
-          mv $OLD_FILE Stata${VERSION}Linux64.tar.gz
-          cd /tmp/
-          sudo mkdir statafiles
-          cd statafiles
-          sudo tar -zxf ~/Downloads/Stata${VERSION}Linux64.tar.gz
-          cd /usr/local
-          sudo mkdir stata${VERSION}
-          cd stata${VERSION}
-          sudo yes | sudo /tmp/statafiles/install
-          export PATH=/usr/local/stata${VERSION}:$PATH
-          sudo ./stinit << EOF
-          y
-          y
-          $SERIAL_NUMBER
-          $CODE
-          $AUTHORIZATION
-          y
-          y
-          $FIRST_NAME
-          $LAST_NAME
-          y
-          EOF
-          which stata
-          cd $HOME_DIR
-          /usr/local/stata${VERSION}/stata -b do main
-          ls -la
-          cat main.log
-          
+      - id: ci-stata
+        uses: ledwindra/continuous-integration-stata@v1
