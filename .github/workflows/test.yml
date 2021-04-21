@@ -34,6 +34,8 @@ jobs:
       run: |
         pwd
         ls -la
+        cd /github/home/continuous-integration-stata
+        pwd
         sudo apt-get install texlive-latex-base
         mkdir -p latex-table
         # pdflatex regression-table.tex
