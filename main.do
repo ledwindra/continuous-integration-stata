@@ -12,3 +12,6 @@ do do/regression_latex.do
 
 // 3. Make a git commit
 shell git status
+shell git add regression-table.tex
+shell git commit -m "Added regression table tex file"
+shell git push origin main
