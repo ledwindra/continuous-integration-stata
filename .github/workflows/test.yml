@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
+    - name: Install LaTeX
+      run: |
+        sudo apt-get install texlive-latex-base
+        mkdir -p latex-table
+    
     - name: Stata Action
       id: ci-stata
       uses: ledwindra/continuous-integration-stata@v1
@@ -29,10 +35,9 @@ jobs:
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
-    - name: Check status
+    - name: Convert LaTeX table to PDF
       run: |
-        sudo apt-get install texlive-latex-base
-        pdflatex latex_table/regression-table.tex
+        pdflatex latex-table/regression-table.tex
         ls -la
 
 #     - name: Convert LaTeX to PDF
