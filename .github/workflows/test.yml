@@ -31,8 +31,10 @@ jobs:
 
     - name: Convert LaTeX to PDF
       uses: xu-cheng/latex-action@v2
+      env:
+        REPOSITORY: ${{ secrets.REPOSITORY_DIR }}
       with:
-        root_file: latex-table/regression-table.tex
+        root_file: ~/${REPOSITORY}/latex-table/regression-table.tex
         
     - name: Set-up git and make a commit
       env:
