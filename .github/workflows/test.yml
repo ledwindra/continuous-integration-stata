@@ -29,26 +29,3 @@ jobs:
         last-name: ${{ secrets.LAST_NAME }}
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
-        
-#     - name: Convert LaTeX table to PDF
-#       run: |
-#         pwd
-#         ls -la
-#         cd /github/home/continuous-integration-stata
-#         pwd
-#         ls -la
-#         sudo apt-get install texlive-latex-base
-#         mkdir -p latex-table
-#         pdflatex regression-table.tex
-
-    - name: Set-up git and make a commit
-      env:
-        ACCESS_TOKEN: ${{ secrets.TOKEN }}
-        EMAIL: ${{ secrets.EMAIL }}
-        REPOSITORY: ${{ secrets.REPOSITORY_DIR }}
-        USERNAME: ${{ secrets.USERNAME }}
-      run: |
-        git config --local user.email $EMAIL
-        git config --local user.name $USERNAME
-        git remote set-url origin https://${USERNAME}:${ACCESS_TOKEN}@github.com/${USERNAME}/${REPOSITORY}.git
-        git status
