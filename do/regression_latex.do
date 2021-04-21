@@ -6,7 +6,7 @@
 ado
 
 // list packages that we may want to install related to LaTeX
-local packages = "outreg estout"
+local packages = "outreg2"
 
 foreach i of local packages {
 	capture which `i'
@@ -24,8 +24,6 @@ sysuse auto, clear
 regress mpg foreign weight turn
 
 // export to a tex file
-outreg using latex-table/regression-table, bdec(2 5 3 2) varlabels replace tex starlevels(10 5 1) ///
-	sigsymbols(+,*,**) summstat(F \ r2_a) summtitle(F statistic \ Adjusted R-squared) ///
-	summdec(1 2)
+outreg2 using latex-table/regression-table.tex, replace cttop(full)
 	
 exit, clear
