@@ -3,7 +3,7 @@ description: 'Run Stata do-file using GitHub Actions'
 inputs:
   url:
     required: true
-  old_file:
+  old-file:
     required: true
   version:
     required: true
@@ -17,15 +17,19 @@ inputs:
     required: true
   last-name:
     required: true
+  repository:
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.url }}
-    - ${{ inputs.old_file }}
+    - ${{ inputs.old-file }}
     - ${{ inputs.version }}
     - ${{ inputs.serial-number }}
     - ${{ inputs.code }}
     - ${{ inputs.authorization }}
     - ${{ inputs.first-name }}
     - ${{ inputs.last-name }}
+    - ${{ inputs.repository-url }}
+    - ${{ inputs.repository-dir }}

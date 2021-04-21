@@ -19,10 +19,12 @@ jobs:
       uses: ledwindra/continuous-integration-stata@v1
       with:
         url: ${{ secrets.URL }}
-        old_file: ${{ secrets.OLD_FILE }}
+        old-file: ${{ secrets.OLD_FILE }}
         version: ${{ secrets.VERSION }}
         serial-number: ${{ secrets.SERIAL_NUMBER }}
         code: ${{ secrets.CODE }}
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
+        repository-url: ${{ secrets.REPOSITORY_URL }}
+        repository-dir: ${{ secrets.REPOSITORY_DIR }}

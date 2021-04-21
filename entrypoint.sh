@@ -28,10 +28,9 @@ y
 EOF
 
 # clone repo
-git clone https://github.com/ledwindra/continuous-integration-stata.git
+git clone $9
 
 # run do-file
-cd continuous-integration-stata
-ls -la
+cd $10
 /usr/local/stata$3/stata -b do main
 cat main.log
