@@ -25,5 +25,8 @@ regress mpg foreign weight turn
 
 // export to a tex file
 outreg2 using regression-table.tex, replace cttop(full)
+
+// list files in current directory
+ls
 	
 exit, clear
