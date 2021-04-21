@@ -8,7 +8,7 @@ on:
         required: false
       tags:
         description: 'Manual trigger'
-        
+
 jobs:
   ci_stata:
     runs-on: ubuntu-latest
@@ -18,11 +18,11 @@ jobs:
       id: ci-stata
       uses: ledwindra/continuous-integration-stata@v1
       with:
-        - ur: ${{ secrets.URL }}
-        - old_file: ${{ secrets.OLD_FILE }}
-        - version: ${{ secrets.VERSION }}
-        - serial-number: ${{ secrets.SERIAL_NUMBER }}
-        - code: ${{ secrets.CODE }}
-        - authorization: ${{ secrets.AUTHORIZATION }}
-        - first-name: ${{ secrets.FIRST_NAME }}
-        - last-name: ${{ secrets.LAST_NAME }}
+        url: ${{ secrets.URL }}
+        old_file: ${{ secrets.OLD_FILE }}
+        version: ${{ secrets.VERSION }}
+        serial-number: ${{ secrets.SERIAL_NUMBER }}
+        code: ${{ secrets.CODE }}
+        authorization: ${{ secrets.AUTHORIZATION }}
+        first-name: ${{ secrets.FIRST_NAME }}
+        last-name: ${{ secrets.LAST_NAME }}
