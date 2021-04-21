@@ -30,9 +30,8 @@ EOF
 # clone repo
 cd ~
 git clone $9
-pwd
 ls -la
-cd $10
+cd "./${10}"
 pwd
 ls -la
 
