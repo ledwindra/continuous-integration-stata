@@ -29,10 +29,10 @@ jobs:
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
-    - name: Convert LaTeX to PDF
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: latex-table/regression-table.tex
+#     - name: Convert LaTeX to PDF
+#       uses: xu-cheng/latex-action@v2
+#       with:
+#         root_file: latex-table/regression-table.tex
           
     - name: Set-up git and make a commit
       uses: actions/checkout@v2
@@ -42,12 +42,12 @@ jobs:
         REPOSITORY: ${{ secrets.REPOSITORY }}
         USERNAME: ${{ secrets.USERNAME }}
       with: |
-        git config --local user.email $EMAIL
-        git config --local user.name $USERNAME
-        git remote set-url origin ${{ secrets.REPOSITORY_URL }}
-        mv regression-table* latex-table/
         git status
-        git add data/* latex-table/*
-        git commit --allow-empty -m "Updated data and regression table"
-        git pull --rebase origin main
-        git push -u origin main
+#         git config --local user.email $EMAIL
+#         git config --local user.name $USERNAME
+#         git remote set-url origin ${{ secrets.REPOSITORY_URL }}
+#         mv regression-table* latex-table/
+#         git add data/* latex-table/*
+#         git commit --allow-empty -m "Updated data and regression table"
+#         git pull --rebase origin main
+#         git push -u origin main
