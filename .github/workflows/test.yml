@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
-    - name: Install LaTeX
-      run: |
-        sudo apt-get install texlive-latex-base
-        mkdir -p latex-table
     
     - name: Stata Action
       id: ci-stata
@@ -37,7 +32,9 @@ jobs:
         
     - name: Convert LaTeX table to PDF
       run: |
-        pdflatex latex-table/regression-table.tex
+        sudo apt-get install texlive-latex-base
+        mkdir -p latex-table
+        pdflatex regression-table.tex
         ls -la
 
 #     - name: Convert LaTeX to PDF
