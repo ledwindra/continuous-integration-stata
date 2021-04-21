@@ -4,8 +4,8 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get clean -y
 RUN apt-get install wget -y
-RUN add-apt-repository ppa:linuxuprising/libpng12 -y
-RUN apt-get install libpng12-0 -y
+RUN wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
+RUN dpkg -i libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
