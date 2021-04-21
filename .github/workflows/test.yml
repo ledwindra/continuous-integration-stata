@@ -29,3 +29,6 @@ jobs:
         last-name: ${{ secrets.LAST_NAME }}
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
+        email: ${{ secrets.EMAIL }}
+        username: ${{ secrets.USERNAME }}
+        token: ${{ secrets.TOKEN }}
