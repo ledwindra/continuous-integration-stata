@@ -18,11 +18,11 @@ jobs:
       id: ci-stata
       uses: ledwindra/continuous-integration-stata@v1
       with:
-          AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
-          CODE: ${{ secrets.CODE }}
-          FIRST_NAME: ${{ secrets.FIRST_NAME }}
-          LAST_NAME: ${{ secrets.LAST_NAME }}
-          OLD_FILE: ${{ secrets.OLD_FILE }}
-          SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
-          URL: ${{ secrets.URL }}
-          VERSION: ${{ secrets.VERSION }}
+        - ur: ${{ secrets.URL }}
+        - old_file: ${{ secrets.OLD_FILE }}
+        - version: ${{ secrets.VERSION }}
+        - serial-number: ${{ secrets.SERIAL_NUMBER }}
+        - code: ${{ secrets.CODE }}
+        - authorization: ${{ secrets.AUTHORIZATION }}
+        - first-name: ${{ secrets.FIRST_NAME }}
+        - last-name: ${{ secrets.LAST_NAME }}
