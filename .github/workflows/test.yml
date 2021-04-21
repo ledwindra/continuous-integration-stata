@@ -32,7 +32,7 @@ jobs:
     - name: Check status
       run: |
         sudo apt-get install texlive-latex-base
-        pdflatex latex_table/regression_table.tex
+        pdflatex latex_table/regression-table.tex
         ls -la
 
 #     - name: Convert LaTeX to PDF
