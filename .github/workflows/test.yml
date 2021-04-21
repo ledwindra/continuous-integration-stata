@@ -31,6 +31,7 @@ jobs:
         
   latex_action:
     runs-on: ubuntu-latest
+    name: Convert LaTeX to PDF
     steps:
       - uses: actions/checkout@v2
           
