@@ -1,40 +1,33 @@
 #!/bin/bash
 
-AUTHORIZATION=$1
-CODE=$2
-FIRST_NAME=$3
-LAST_NAME=$4
-OLD_FILE=$5
-SERIAL_NUMBER=$6
-URL=$7
-VERSION=$8
-
+# install stata
 mkdir ~/Downloads
 cd ~/Downloads
-wget "$URL"
-mv "$OLD_FILE" Stata"${VERSION}"Linux64.tar.gz
+wget $1
+mv $2 Stata$3Linux64.tar.gz
 cd /tmp/
-sudo mkdir statafiles
+mkdir statafiles
 cd statafiles
-sudo tar -zxf ~/Downloads/Stata"${VERSION}"Linux64.tar.gz
+tar -zxf ~/Downloads/Stata$3Linux64.tar.gz
 cd /usr/local
-sudo mkdir stata"${VERSION}"
-cd stata"${VERSION}"
-sudo yes | sudo /tmp/statafiles/install
-export PATH=/usr/local/stata"${VERSION}":$PATH
-sudo ./stinit << EOF
+mkdir stata$3
+cd stata$3
+yes | /tmp/statafiles/install
+export PATH=/usr/local/stata$3:$PATH
+./stinit << EOF
 y
 y
-"$SERIAL_NUMBER"
-"$CODE"
-"$AUTHORIZATION"
+$4
+$5
+$6
 y
 y
-"$FIRST_NAME"
-"$LAST_NAME"
+$7
+$8
 y
 EOF
-which stata
+
+# run do-file
 cd ~
-/usr/local/stata"${VERSION}"/stata -b do main
+/usr/local/stata$3/stata -b do main
 cat main.log
