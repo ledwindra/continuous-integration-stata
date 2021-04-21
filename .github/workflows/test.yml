@@ -32,6 +32,7 @@ jobs:
         
     - name: Convert LaTeX table to PDF
       run: |
+        pwd
         ls -la
         sudo apt-get install texlive-latex-base
         mkdir -p latex-table
