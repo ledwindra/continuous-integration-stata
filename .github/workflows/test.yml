@@ -28,6 +28,11 @@ jobs:
         last-name: ${{ secrets.LAST_NAME }}
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
+
+    - name: Convert LaTeX to PDF
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: latex-table/regression-table.tex
         
     - name: Set-up git and make a commit
       env:
@@ -37,11 +42,13 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
       run: |
         ls -la
+        ls -la data/
+        ls -la latex-table
         git config --local user.email $EMAIL
         git config --local user.name $USERNAME
         git remote set-url origin https://${USERNAME}:${ACCESS_TOKEN}@github.com/${USERNAME}/${REPOSITORY}.git
-        mv regression-table* latex-table/
         git status
+        mv regression-table* latex-table/
         git add data/* latex-table/*
         git commit --allow-empty -m "Updated data and regression table"
         git pull --rebase origin main
