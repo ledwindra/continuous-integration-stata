@@ -20,5 +20,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/main.sh ${AUTHORIZATION} ${CODE} ${FIRST_NAME} ${LAST_NAME} ${OLD_FILE} ${SERIAL_NUMBER} ${URL} ${VERSION}
+    - run: ${{ github.action_path }}/main.sh "${AUTHORIZATION}" "${CODE}" "${FIRST_NAME}" "${LAST_NAME}" "${OLD_FILE}" "${SERIAL_NUMBER}" "${URL}" "${VERSION}"
       shell: bash
