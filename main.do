@@ -11,6 +11,8 @@ do do/basic.do
 do do/regression_latex.do
 
 // 3. Make a git commit
+shell git config --global user.email lukman.edwindra@gmail.com
+shell git config --global user.name ledwindra
 shell git status
 shell git add regression-table.tex
 shell git commit -m "Added regression table tex file"
