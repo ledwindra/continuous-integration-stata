@@ -8,14 +8,16 @@ on:
         required: false
       tags:
         description: 'Manual trigger'
-
+        
 jobs:
-  ci-stata:
+  ci_stata:
     runs-on: ubuntu-16.04
     name: Run Stata do-file
     steps:
-      - uses: actions/checkout@v2
-      - env:
+    - name: Stata Action
+      id: ci-stata
+      uses: ledwindra/continuous-integration-stata@v1
+      with:
           AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
           CODE: ${{ secrets.CODE }}
           FIRST_NAME: ${{ secrets.FIRST_NAME }}
@@ -24,5 +26,3 @@ jobs:
           SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
           URL: ${{ secrets.URL }}
           VERSION: ${{ secrets.VERSION }}
-      - id: ci-stata
-        uses: ledwindra/continuous-integration-stata@v1
