@@ -17,7 +17,9 @@ inputs:
     required: true
   last-name:
     required: true
-  repository:
+  repository-url:
+    required: true
+  repository-dir:
     required: true
 runs:
   using: 'docker'
