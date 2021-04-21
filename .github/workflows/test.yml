@@ -31,13 +31,14 @@ jobs:
         
     - name: Check status
       run: |
-        pwd
+        sudo apt-get install texlive-latex-base
+        pdflatex latex_table/regression_table.tex
         ls -la
 
-    - name: Convert LaTeX to PDF
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: /home/runner/work/continuous-integration-stata/continuous-integration-stata/latex-table/regression-table.tex
+#     - name: Convert LaTeX to PDF
+#       uses: xu-cheng/latex-action@v2
+#       with:
+#         root_file: /home/runner/work/continuous-integration-stata/continuous-integration-stata/latex-table/regression-table.tex
         
 #     - name: Set-up git and make a commit
 #       env:
