@@ -29,8 +29,9 @@ EOF
 
 # clone repo
 git clone $9
+ls -la
+cd $10
 
 # run do-file
-cd $10
 /usr/local/stata$3/stata -b do main
 cat main.log
