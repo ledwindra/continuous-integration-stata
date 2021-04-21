@@ -28,10 +28,12 @@ y
 EOF
 
 # clone repo
-echo "$9"
-git clone "$9"
-echo $10
+cd ~
+git clone $9
+pwd
+ls -la
 cd $10
+pwd
 ls -la
 
 # run do-file
