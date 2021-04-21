@@ -1,6 +1,13 @@
 name: Test CI Stata
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: false
+      tags:
+        description: 'Manual trigger'
 
 jobs:
   ci-stata:
