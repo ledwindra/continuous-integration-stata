@@ -15,11 +15,13 @@ local email = "`1'"
 local username = "`2'"
 local token = "`3'"
 local repository = "`4'"
+local origin = "https://`username':`token'@github.com/`username'/`repository'.git"
 
 shell git config --global user.email "`email'"
 shell git config --global user.name "`username'"
 shell git status
 shell git add regression-table.tex
 shell git commit -m "Added regression table tex file"
-shell git remote set-url origin "https://`username':`token'@github.com/`username'/`repository'.git"
-shell git push origin main
+shell git remote set-url origin "`origin'"
+display "`origin'"
+# shell git push origin main
