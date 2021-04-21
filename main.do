@@ -10,5 +10,5 @@ do do/basic.do
 // 2. Regression table
 do do/regression_latex.do
 
-// 3, 4, ..., N
-// Just edit this according to users' workflow
+// 3. Make a git commit
+shell git status
