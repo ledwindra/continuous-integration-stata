@@ -21,6 +21,8 @@ inputs:
     required: true
   repository-dir:
     required: true
+  token:
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -35,3 +37,4 @@ runs:
     - ${{ inputs.last-name }}
     - ${{ inputs.repository-url }}
     - ${{ inputs.repository-dir }}
+    - ${{ inputs.token }}
