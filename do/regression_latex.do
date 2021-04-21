@@ -24,6 +24,6 @@ sysuse auto, clear
 regress mpg foreign weight turn
 
 // export to a tex file
-outreg2 using latex-table/regression-table.tex, replace cttop(full)
+outreg2 using regression-table.tex, replace cttop(full)
 	
 exit, clear
