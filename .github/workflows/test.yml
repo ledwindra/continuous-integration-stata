@@ -8,5 +8,14 @@ jobs:
     name: Run Stata do-file
     steps:
       - uses: actions/checkout@v2
+      - env:
+          AUTHORIZATION: ${{ secrets.AUTHORIZATION }}
+          CODE: ${{ secrets.CODE }}
+          FIRST_NAME: ${{ secrets.FIRST_NAME }}
+          LAST_NAME: ${{ secrets.LAST_NAME }}
+          OLD_FILE: ${{ secrets.OLD_FILE }}
+          SERIAL_NUMBER: ${{ secrets.SERIAL_NUMBER }}
+          URL: ${{ secrets.URL }}
+          VERSION: ${{ secrets.VERSION }}
       - id: ci-stata
         uses: ledwindra/continuous-integration-stata@v1
