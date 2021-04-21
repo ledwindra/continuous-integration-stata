@@ -30,38 +30,25 @@ jobs:
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
-    - name: Convert LaTeX table to PDF
-      run: |
-        pwd
-        ls -la
-        cd /github/home/continuous-integration-stata
-        pwd
-        ls -la
-        sudo apt-get install texlive-latex-base
-        mkdir -p latex-table
-        # pdflatex regression-table.tex
-
-#     - name: Convert LaTeX to PDF
-#       uses: xu-cheng/latex-action@v2
-#       with:
-#         root_file: /home/runner/work/continuous-integration-stata/continuous-integration-stata/latex-table/regression-table.tex
-        
-#     - name: Set-up git and make a commit
-#       env:
-#         ACCESS_TOKEN: ${{ secrets.TOKEN }}
-#         EMAIL: ${{ secrets.EMAIL }}
-#         REPOSITORY: ${{ secrets.REPOSITORY_DIR }}
-#         USERNAME: ${{ secrets.USERNAME }}
+#     - name: Convert LaTeX table to PDF
 #       run: |
+#         pwd
 #         ls -la
-#         ls -la data/
-#         ls -la latex-table
-#         git config --local user.email $EMAIL
-#         git config --local user.name $USERNAME
-#         git remote set-url origin https://${USERNAME}:${ACCESS_TOKEN}@github.com/${USERNAME}/${REPOSITORY}.git
-#         git status
-#         mv regression-table* latex-table/
-#         git add data/* latex-table/*
-#         git commit --allow-empty -m "Updated data and regression table"
-#         git pull --rebase origin main
-#         git push -u origin main
+#         cd /github/home/continuous-integration-stata
+#         pwd
+#         ls -la
+#         sudo apt-get install texlive-latex-base
+#         mkdir -p latex-table
+#         pdflatex regression-table.tex
+
+    - name: Set-up git and make a commit
+      env:
+        ACCESS_TOKEN: ${{ secrets.TOKEN }}
+        EMAIL: ${{ secrets.EMAIL }}
+        REPOSITORY: ${{ secrets.REPOSITORY_DIR }}
+        USERNAME: ${{ secrets.USERNAME }}
+      run: |
+        git config --local user.email $EMAIL
+        git config --local user.name $USERNAME
+        git remote set-url origin https://${USERNAME}:${ACCESS_TOKEN}@github.com/${USERNAME}/${REPOSITORY}.git
+        git status
