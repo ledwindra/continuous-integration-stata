@@ -28,6 +28,8 @@ y
 EOF
 
 # run do-file
+ls -la
 cd ~
+ls -la
 /usr/local/stata$3/stata -b do main
 cat main.log
