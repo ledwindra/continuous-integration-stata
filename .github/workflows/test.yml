@@ -32,10 +32,10 @@ jobs:
         
     - name: Convert LaTeX table to PDF
       run: |
+        ls -la
         sudo apt-get install texlive-latex-base
         mkdir -p latex-table
-        pdflatex regression-table.tex
-        ls -la
+        # pdflatex regression-table.tex
 
 #     - name: Convert LaTeX to PDF
 #       uses: xu-cheng/latex-action@v2
