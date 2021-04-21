@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1618764558 "latex-table/regression-table.tex" "regression-table.pdf" "regression-table" 1618764558
+["pdflatex"] 1618989921 "latex-table/regression-table.tex" "regression-table.pdf" "regression-table" 1618989921
   "/opt/texlive/texdir/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -17,9 +17,9 @@
   "/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1617440479 5175482 caae2fc614a7ab2c2679f7e0a9621c03 ""
   "/opt/texlive/texdir/texmf-var/web2c/pdftex/pdflatex.fmt" 1617440542 2724686 e0f9a6a708675b91444aeba571d6f007 ""
   "/opt/texlive/texdir/texmf.cnf" 1617440470 555 bd60ff59e4d560b42d96b004436f91d3 ""
-  "latex-table/regression-table.tex" 1618764556 783 109213f916a691f0b29d5922813d149e ""
-  "regression-table.aux" 1618764558 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "latex-table/regression-table.tex" 1618989920 783 109213f916a691f0b29d5922813d149e ""
+  "regression-table.aux" 1618989921 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
-  "regression-table.pdf"
   "regression-table.aux"
+  "regression-table.pdf"
   "regression-table.log"
