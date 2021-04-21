@@ -4,6 +4,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get clean -y
 RUN apt-get install -y wget
+RUN apt-get install -y libpng12.so.0
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
