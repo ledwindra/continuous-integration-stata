@@ -17,7 +17,7 @@ jobs:
     
     - name: Stata Action
       id: ci-stata
-      uses: ledwindra/continuous-integration-stata@v1
+      uses: ledwindra/continuous-integration-stata@v1.1
       with:
         url: ${{ secrets.URL }}
         old-file: ${{ secrets.OLD_FILE }}
@@ -29,6 +29,13 @@ jobs:
         last-name: ${{ secrets.LAST_NAME }}
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
-        email: ${{ secrets.EMAIL }}
-        username: ${{ secrets.USERNAME }}
-        token: ${{ secrets.TOKEN }}
+        
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        pwd
+        ls -la
+        cd ${GITHUB_WORKSPACE}
+        pwd
+        ls -la
+        git status
