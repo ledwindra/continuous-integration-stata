@@ -18,6 +18,23 @@ In addition to solving the problems above, you can benefit from this repository 
 # Workflows
 You need to have a do-file named `main.do` in your root directory. This file will trigger all of your workflows, e.g. from data cleaning, data analysis, data visualizations, to creating regression tables to LaTeX. For the latter part, we can also compile the `tex` file into `pdf` using GitHub Actions, which is totally cool!
 
+Since Stata has user-written packages that users may have not installed on their machine, it sometimes can be a cause of an error. Hence, it may be a good practice to run the following code in the beginning of your `main.do` file:
+
+```stata
+clear
+
+// list packages that we may want to install
+local packages = "unique reghdfe ritest estout ivreghdfe ftools ivreg2" // just for example
+
+foreach i of local packages {
+	capture which `i'
+	if _rc != 0 {
+		display _rc
+		ssc install `i', replace
+	}
+}
+```
+
 # What you need
 I hope that you are using a legitimate Stata license code because in order to run
 Stata do-file using GitHub Actions you need:
