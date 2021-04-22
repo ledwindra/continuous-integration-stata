@@ -10,4 +10,7 @@ do do/basic.do
 // 2. Regression table
 do do/regression_latex.do
 
-// 3, 4, ..., N -> depends on user's needs
+// 3. Data visualization
+do do/visualization.do
+
+// 4, 5, ..., N -> depends on user's needs
