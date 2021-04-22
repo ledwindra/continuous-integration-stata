@@ -50,5 +50,16 @@ You may need to modify the workflow [configurations](https://github.com/ledwindr
 - There's a possibility that your runner will be stopped automatically by GitHub Actions if it runs out of memory. In one of my private repositories, I had encountered the following error message: `##[warning]You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 0 MB`. Case in point: it's a GIS-related program
 - You have complex do-files that require more configurations in the LaTeX files (e.g. installing packages, font set-up, etc)
 
+# Awesome Stata practices
+Resources for us to learn (and me particularly) for Stata best practices.
+
+## Blog
+- American Economic Association's [Data Editor](https://github.com/aeadataeditor)
+- Asjad Naqvi's [The Stata Guide](https://medium.com/the-stata-guide)
+- Julian Reif's [Stata Coding Guide](https://julianreif.com/guide/)
+
+## Twitter thread
+- AEA Data Editor on [file path](https://twitter.com/AeaData/status/1380555102658957315)
+
 # P.S.
 Don't hesitate to reach me out for further questions or send issues [here](https://github.com/ledwindra/continuous-integration-stata/issues). Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
