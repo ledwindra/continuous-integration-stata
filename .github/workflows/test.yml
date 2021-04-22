@@ -30,7 +30,13 @@ jobs:
         repository-url: ${{ secrets.REPOSITORY_URL }}
         repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
-    - name: Run a multi-line script
+    - name: Install LaTeX and compile tex file to pdf
+      run: |
+        # https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d
+        sudo apt-get install texlive-latex-base
+        pdflatex regression-table.tex
+        
+    - name: Make a git commit
       env:
         EMAIL: ${{ secrets.EMAIL }}
         USERNAME: ${{ secrets.USERNAME }}
