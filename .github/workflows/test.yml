@@ -27,8 +27,6 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
-        repository-url: ${{ secrets.REPOSITORY_URL }}
-        repository-dir: ${{ secrets.REPOSITORY_DIR }}
         
     - name: Install LaTeX and compile tex file to pdf
       run: |
