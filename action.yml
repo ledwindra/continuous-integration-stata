@@ -1,26 +1,31 @@
 name: 'Stata Action'
 description: 'Run Stata do-file using GitHub Actions'
+author: 'Lukman Edwindra'
 inputs:
   url:
     required: true
+    description: 'The link to your Stata installer'
   old-file:
     required: true
+    description: 'Name of your Stata do-file after being downloaded'
   version:
     required: true
+    description: 'Your Stata version'
   serial-number:
     required: true
+    description: 'Your Stata serial number (this will be encrypter so that nobody can see it)'
   code:
     required: true
+    description: 'Your Stata code license (this will be encrypter so that nobody can see it)'
   authorization:
     required: true
+    description: 'Your Stata authorization license (this will be encrypter so that nobody can see it)'
   first-name:
     required: true
+    description: 'Your Stata first-name display'
   last-name:
     required: true
-  repository-url:
-    required: true
-  repository-dir:
-    required: true
+    description: 'Your Stata last-name display'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -33,5 +38,3 @@ runs:
     - ${{ inputs.authorization }}
     - ${{ inputs.first-name }}
     - ${{ inputs.last-name }}
-    - ${{ inputs.repository-url }}
-    - ${{ inputs.repository-dir }}
