@@ -35,6 +35,9 @@ foreach i of local packages {
 }
 ```
 
+# Does it really work to your paper?
+Yes! Check out this [paper](https://github.com/adviksh/when-guidance-changes) from Charlie Rafkin, Advik Shreekumar, and Pierre-Luc Vautrey, where I clone their repository and run the corresponding Stata do-files (not the R code since it's about Stata workflow) in my [main.do](https://github.com/ledwindra/continuous-integration-stata/blob/main/main.do) (**see lines 20-50**)
+
 # What you need
 I hope that you are using a legitimate Stata license code because in order to run
 Stata do-file using GitHub Actions you need:
