@@ -76,5 +76,15 @@ cd /github/workspace
 
 # run do-file
 /usr/local/stata$2/stata -b do main
-cat main.log
-cat /github/home/.stata_kernel_cache/console_debug.log
+
+if [ -f main.log ]; then
+    cat main.log
+else 
+    echo "main.log does not exist."
+fi
+
+if [ -f /github/home/.stata_kernel_cache/console_debug.log ]; then
+    cat /github/home/.stata_kernel_cache/console_debug.log
+else 
+    echo "/github/home/.stata_kernel_cache/console_debug.log does not exist."
+fi
