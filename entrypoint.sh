@@ -3,27 +3,26 @@
 # install stata
 mkdir ~/Downloads
 cd ~/Downloads
-wget $1
-mv $2 Stata$3Linux64.tar.gz
+wget -O Stata$2Linux64.tar.gz $1
 cd /tmp/
 mkdir statafiles
 cd statafiles
-tar -zxf ~/Downloads/Stata$3Linux64.tar.gz
+tar -zxf ~/Downloads/Stata$2Linux64.tar.gz
 cd /usr/local
-mkdir stata$3
-cd stata$3
+mkdir stata$2
+cd stata$2
 yes | /tmp/statafiles/install
 export PATH=/usr/local/stata$3:$PATH
 ./stinit << EOF
 y
 y
+$3
 $4
 $5
+y
+y
 $6
-y
-y
 $7
-$8
 y
 EOF
 
@@ -31,5 +30,5 @@ EOF
 cd /github/workspace
 
 # run do-file
-/usr/local/stata$3/stata -b do main
+/usr/local/stata$2/stata -b do main
 cat main.log
