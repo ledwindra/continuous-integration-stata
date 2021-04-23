@@ -22,9 +22,6 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
-    
-    - name: Check whether Stata is installed
-      run: which stata
       
     - name: Debug
       uses: actions/setup-python@v2
@@ -34,3 +31,4 @@ jobs:
       run: |
         jupyter nbconvert --to notebook --execute debug.ipynb
         mv debug.nbconvert.ipynb debug.ipynb
+        which stata
