@@ -3,7 +3,7 @@
 # install stata
 mkdir ~/Downloads
 cd ~/Downloads
-wget -O $1
+wget -O Stata$2Linux64.tar.gz $1
 cd /tmp/
 mkdir statafiles
 cd statafiles
