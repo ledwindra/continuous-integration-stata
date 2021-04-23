@@ -26,26 +26,3 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
-        
-    - name: Install LaTeX and compile tex file to pdf
-      run: |
-        # https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d
-        sudo apt-get install texlive-latex-base
-        pdflatex regression-table.tex
-        
-    - name: Make a git commit
-      env:
-        EMAIL: ${{ secrets.EMAIL }}
-        USERNAME: ${{ secrets.USERNAME }}
-        
-      run: |
-        git status
-        git config --global user.email ${EMAIL}
-        git config --global user.name ${USERNAME}
-        mkdir -p latex
-        mv regression-table* latex/
-        git add data/ latex/
-        git commit --allow-empty -m "Updated data and LaTeX table"
-        git pull --rebase origin main
-        git push origin main
-
