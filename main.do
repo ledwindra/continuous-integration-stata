@@ -15,8 +15,13 @@ do do/regression_latex.do
 // 3. Data visualization
 do do/visualization.do
 
-// 4, 5, ..., N -> depends on user's needs
+// 4 Execute Jupyter notebook using Stata kernel
+shell jupyter nbconvert --to notebook --execute main.ipynb
+shell mv main.nbconvert.ipynb main.ipynb
 
+// 5, ..., N -> depends on user's needs
+
+/*
 ********************************************************************************
 * PURPOSE: reproduce results from an open source paper
 * https://github.com/adviksh/when-guidance-changes
@@ -51,3 +56,4 @@ do code/make_shifty.do
 
 clear
 exit
+*/
