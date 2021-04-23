@@ -46,7 +46,7 @@ Stata do-file using GitHub Actions you need:
 - Authorization
 
 # How to run?
-You can download the source code from [here](https://github.com/ledwindra/continuous-integration-stata/releases). Make sure to choose the latest version available. Then, you can create your own repository on GitHub. Before going any further, you need to add GitHub Secrets on `Settings -> Secrets` tab inside your repository. Note that only **you** can see these environment variables unless you make it public (but don't!). Though I make this package, I **can not** see them either. What you need are the following:
+You can download the source code from [here](https://github.com/ledwindra/continuous-integration-stata/releases). Make sure to choose the latest version available. Then, you can create your own repository on GitHub. Before going any further, you need to add GitHub Secrets on `Settings -> Secrets` tab inside your repository. Note that only **you** can see these environment variables unless you make them public (but don't!). Though I make this package, I **can not** see them either. What you need are the following:
 
 - ACCESS_TOKEN: you need a token that authorizes GitHub to make any git commit on behalf your account. Read [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) for details
 - AUTHORIZATION: given by Stata
