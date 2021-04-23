@@ -81,7 +81,7 @@ Resources for us to learn (and me particularly) for Stata best practices.
 
 # Limitations
 This is not a perfect solution to your Stata workflow for several reasons:
-- If you have an older Stata version, you may face issues running other people's codes from newer Stata version. Case in point: I tried to replicate [Scott Cunningham's Mixtape book](https://github.com/scunning1975/mixtape/), but one of his do-files contain a package named [parmest](https://github.com/scunning1975/mixtape/blob/master/Do/abortion_dd.do). I'm using Stata 15, and it resulted to the following error: `this is version 15.1 of Stata; it cannot run version 16.0 programs`
+- If you have an older Stata version, you may face issues running other people's codes from newer Stata version. Case in point: I tried to replicate [Scott Cunningham's Mixtape book](https://github.com/scunning1975/mixtape/), but one of his do-files contains a package named [parmest](https://github.com/scunning1975/mixtape/blob/master/Do/abortion_dd.do). I'm using Stata 15, and it resulted to the following error: `this is version 15.1 of Stata; it cannot run version 16.0 programs`
 - If you have Stata IC (which I'm using) not MP, then you may face several difficulties that you can see [here](https://www.stata.com/products/which-stata-is-right-for-me/) when running other people's codes
 
 # P.S.
