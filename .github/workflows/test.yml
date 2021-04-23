@@ -17,7 +17,7 @@ jobs:
     
     - name: Stata Action
       id: ci-stata
-      uses: ledwindra/continuous-integration-stata@v1
+      uses: ./ # Uses an action in the root directory
       with:
         url: ${{ secrets.URL }}
         version: ${{ secrets.VERSION }}
