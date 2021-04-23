@@ -26,3 +26,7 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
+    
+    - name: Debut
+      run: |
+        which stata
