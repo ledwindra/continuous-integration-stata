@@ -28,7 +28,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.url }}
-    - ${{ inputs.old-file }}
     - ${{ inputs.version }}
     - ${{ inputs.serial-number }}
     - ${{ inputs.code }}
