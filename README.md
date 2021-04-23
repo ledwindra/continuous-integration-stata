@@ -54,9 +54,9 @@ You can download the source code from [here](https://github.com/ledwindra/contin
 - EMAIL: your GitHub email for git configuration (`git config --global user.email`). See [here](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 - FIRST_NAME: your Stata first name
 - LAST_NAME: your Stata last name
-- OLD_FILE: by default, Stata gives the file name as `Stata15Linux64.tar.gz`. When downloading from it becomes `Stata15Linux64.tar.gz?dl=0` and it needs to be renamed just like the original
+- OLD_FILE: by default, Stata gives the file name as `Stata15Linux64.tar.gz`. When downloading from the source (I'm saving the Linux installer to Dropbox from Stata since `https://download.stata.com/download/` requires sign-in) it becomes `Stata15Linux64.tar.gz?dl=0` and it needs to be renamed just like the original
 - SERIAL_NUMBER: given by Stata
-- URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository
+- URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository. Also, I don't want to pirate a proprietary software which can bring me into a problem
 - USERNAME: your GitHub username for git configuration (`git config --global user.name`). See [here](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 - VERSION: your Stata version (I use 15)
 
