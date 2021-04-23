@@ -75,6 +75,6 @@ jupyter kernelspec list
 cd /github/workspace
 
 # run do-file
-/usr/local/stata$2/stata -b do main
+/usr/local/stata$2/stata -b do main, nostop
 cat main.log
 cat /github/home/.stata_kernel_cache/console_debug.log
