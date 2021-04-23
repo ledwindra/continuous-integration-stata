@@ -2,12 +2,6 @@ name: Test CI Stata
 
 on:
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: false
-      tags:
-        description: 'Manual trigger'
 
 jobs:
   build:
@@ -27,6 +21,14 @@ jobs:
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
     
-    - name: Debut
+    - name: Check whether Stata is installed
+      run: which stata
+      
+    - name: Debug
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Run script
       run: |
-        which stata
+        jupyter nbconvert --to notebook --execute debug.ipynb
+        mv debug.nbconvert.ipynb debug.ipynb
