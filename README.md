@@ -46,7 +46,7 @@ Stata do-file using GitHub Actions you need:
 - Authorization
 
 # How to run?
-You can download the source code from [here](https://github.com/ledwindra/continuous-integration-stata/releases). Make sure to choose the latest version available. Then, you can create your own repository on GitHub. Before going any further, you need to add GitHub Secrets on `Settings -> Secrets` tab inside your repository. What you need are the following:
+You can download the source code from [here](https://github.com/ledwindra/continuous-integration-stata/releases). Make sure to choose the latest version available. Then, you can create your own repository on GitHub. Before going any further, you need to add GitHub Secrets on `Settings -> Secrets` tab inside your repository. Note that only **you** can see these environment variables unless you make it public (but don't!). Though I make this package, I **can not** see them either. What you need are the following:
 
 - ACCESS_TOKEN: you need a token that authorizes GitHub to make any git commit on behalf your account. Read [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) for details
 - AUTHORIZATION: given by Stata
@@ -78,6 +78,11 @@ Resources for us to learn (and me particularly) for Stata best practices.
 
 ## Twitter thread
 - AEA Data Editor on [file path](https://twitter.com/AeaData/status/1380555102658957315)
+
+# Limitations
+This is not a perfect solution to your Stata workflow for several reasons:
+- If you have an older Stata version, you may face issues running other people's codes from newer Stata version. Case in point: I tried to replicate [Scott Cunningham's Mixtape book](https://github.com/scunning1975/mixtape/), but one of his do-files contain a package named [parmest](https://github.com/scunning1975/mixtape/blob/master/Do/abortion_dd.do). I'm using Stata 15, and it resulted to the following error: `this is version 15.1 of Stata; it cannot run version 16.0 programs`
+- If you have Stata IC (which I'm using) not MP, then you may face several difficulties that you can see [here](https://www.stata.com/products/which-stata-is-right-for-me/) when running other people's codes
 
 # P.S.
 Don't hesitate to reach me out for further questions or send issues [here](https://github.com/ledwindra/continuous-integration-stata/issues). Read [GitHub Actions Documentation](https://docs.github.com/en/actions) for further details.
