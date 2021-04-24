@@ -43,4 +43,4 @@ elif [ $8 == "stata-mp" ]; then
 fi
 
 # print log result
-cat main.log
+cat basic.log
