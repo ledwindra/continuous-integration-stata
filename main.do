@@ -38,7 +38,7 @@ foreach i of local packages {
 // not all replication packages requires python hence use it on main.do
 // put it into dockerfile will only waste resources for users who don't need it
 shell apt-get install python3 -y
-shell apt-get install git-all -y
+shell apt-get install git -y
 shell git clone https://github.com/adviksh/when-guidance-changes.git
 cd when-guidance-changes
 cd stata
