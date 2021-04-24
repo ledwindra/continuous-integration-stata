@@ -17,7 +17,7 @@ do do/visualization.do
 
 // 4, 5, ..., N -> depends on user's needs
 
-********************************************************************************
+/********************************************************************************
 * PURPOSE: reproduce results from an open source paper
 * https://github.com/adviksh/when-guidance-changes
 ********************************************************************************
@@ -46,6 +46,7 @@ shell mkdir -p out
 shell mkdir -p log
 
 do code/make_shifty.do
+*/
 
 clear
 exit
