@@ -11,7 +11,7 @@ jobs:
     
     - name: Stata Action
       id: ci-stata
-      uses: ./
+      uses: ledwindra@continuous-integration-stata@v1
       with:
         url: ${{ secrets.URL }}
         version: ${{ secrets.VERSION }}
@@ -20,7 +20,7 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
-        stata-edition: 'stata'
+        stata-edition: ${{ secrets.STATA_EDITION }}
         
     - name: Install LaTeX and compile tex file to pdf
       run: |
