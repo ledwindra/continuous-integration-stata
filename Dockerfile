@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get clean -y

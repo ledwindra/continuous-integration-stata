@@ -55,6 +55,7 @@ You can download the source code from [here](https://github.com/ledwindra/contin
 - FIRST_NAME: your Stata first name
 - LAST_NAME: your Stata last name
 - SERIAL_NUMBER: given by Stata
+- STATA_EDITION: your Stata edition (BE/IC, SE, or MP). The choices that you can fill are either `stata`, `stata-se`, or `stata-mp`. Using different edition than your purchase will cause an error to the program
 - URL: the URL to download Stata file. Choose Linux installer from Stata. Then save it on other place. I'm using Dropbox because the file size is too big to be stored inside this repository. Also, I don't want to pirate a proprietary software which can bring me into a problem
 - USERNAME: your GitHub username for git configuration (`git config --global user.name`). See [here](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 - VERSION: your Stata version (I use 15)

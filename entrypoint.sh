@@ -12,7 +12,7 @@ cd /usr/local
 mkdir stata$2
 cd stata$2
 yes | /tmp/statafiles/install
-export PATH=/usr/local/stata$3:$PATH
+export PATH=/usr/local/stata$2:$PATH
 ./stinit << EOF
 y
 y
@@ -30,5 +30,5 @@ EOF
 cd /github/workspace
 
 # run do-file
-/usr/local/stata$2/stata -b do main
+/usr/local/stata$2/$8 -b do main
 cat main.log

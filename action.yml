@@ -23,6 +23,9 @@ inputs:
   last-name:
     required: true
     description: 'Your Stata last-name display'
+  stata-edition:
+    required: true
+    description: 'Your Stata edition. Choices: stata, stata-se, stata-mp)'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -34,3 +37,4 @@ runs:
     - ${{ inputs.authorization }}
     - ${{ inputs.first-name }}
     - ${{ inputs.last-name }}
+    - ${{ inputs.stata-edition }}

@@ -2,12 +2,6 @@ name: Test CI Stata
 
 on:
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: false
-      tags:
-        description: 'Manual trigger'
 
 jobs:
   build:
@@ -17,7 +11,7 @@ jobs:
     
     - name: Stata Action
       id: ci-stata
-      uses: ledwindra/continuous-integration-stata@v1
+      uses: ./
       with:
         url: ${{ secrets.URL }}
         version: ${{ secrets.VERSION }}
@@ -26,6 +20,7 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
+        stata-edition: ${{ secrets.STATA_EDITION }}
         
     - name: Install LaTeX and compile tex file to pdf
       run: |
