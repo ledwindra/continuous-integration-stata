@@ -33,13 +33,13 @@ cd /github/workspace
 echo $8
 if [ $8 == "stata" ]; then
     echo $8
-    stata -b do do/main
+    stata -b do main
 elif [ $8 == "stata-se" ]; then
     echo $8
-    stata-se -b do do/main
+    stata-se -b do main
 elif [ $8 == "stata-mp" ]; then
     echo $8
-    stata-mp -b do do/main
+    stata-mp -b do main
 fi
 
 # print log result
