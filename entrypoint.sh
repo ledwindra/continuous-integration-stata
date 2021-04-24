@@ -32,5 +32,5 @@ cd /github/workspace
 # run do-file
 ls -la /usr/local/stata$2/
 which stata
-$8 -b do main
+stata -b do main
 cat main.log
