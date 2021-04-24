@@ -20,7 +20,7 @@ jobs:
         authorization: ${{ secrets.AUTHORIZATION }}
         first-name: ${{ secrets.FIRST_NAME }}
         last-name: ${{ secrets.LAST_NAME }}
-        stata-edition: ${{ secrets.STATA_EDITION }}
+        stata-edition: 'stata'
         
     - name: Install LaTeX and compile tex file to pdf
       run: |

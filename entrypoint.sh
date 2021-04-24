@@ -30,13 +30,7 @@ EOF
 cd /github/workspace
 
 # run do-file
-if [ $8 == "stata" ]; then
-	stata -b do do/basic
-elif [ $8 == "stata-se" ]; then
-	stata-se -b do do/basic
-elif [ $8 == "stata-mp" ]; then
-	stata-mp -b do do/basic
-fi
+$8 -b do do/basic
 
 # print log result
 cat main.log
